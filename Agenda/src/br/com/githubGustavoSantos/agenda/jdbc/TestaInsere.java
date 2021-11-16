@@ -1,9 +1,9 @@
-package br.com.caelum.agenda.jdbc;
+package br.com.githubGustavoSantos.agenda.jdbc;
 
 import java.util.Calendar;
 
-import br.com.caelum.agenda.dao.ContatoDao;
-import br.com.caelum.agenda.modelo.Contato;
+import br.com.githubGustavoSantos.agenda.dao.ContatoDao;
+import br.com.githubGustavoSantos.agenda.modelo.Contato;
 
 public class TestaInsere {
 
