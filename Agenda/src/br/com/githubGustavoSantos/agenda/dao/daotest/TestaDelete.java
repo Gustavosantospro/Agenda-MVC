@@ -1,7 +1,7 @@
-package br.com.caelum.agenda.dao.daotest;
+package br.com.githubGustavoSantos.agenda.dao.daotest;
 
-import br.com.caelum.agenda.dao.ContatoDao;
-import br.com.caelum.agenda.modelo.Contato;
+import br.com.githubGustavoSantos.agenda.dao.ContatoDao;
+import br.com.githubGustavoSantos.agenda.modelo.Contato;
 
 public class TestaDelete {
 	public static void main(String[] args) {
