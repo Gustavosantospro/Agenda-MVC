@@ -1,10 +1,10 @@
-package br.com.caelum.agenda.mvc.logica;
+package br.com.githubGustavoSantos.agenda.mvc.logica;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.caelum.agenda.dao.ContatoDao;
-import br.com.caelum.agenda.modelo.Contato;
+import br.com.githubGustavoSantos.agenda.dao.ContatoDao;
+import br.com.githubGustavoSantos.agenda.modelo.Contato;
 
 public class RemoveContatoLogica implements Logica {
 
