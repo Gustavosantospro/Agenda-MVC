@@ -1,4 +1,4 @@
-package br.com.caelum.agenda.dao;
+package br.com.githubGustavoSantos.agenda.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.Date;
-import br.com.caelum.agenda.jdbc.ConnectionFactory;
-import br.com.caelum.agenda.modelo.Contato;
+import br.com.githubGustavoSantos.agenda.jdbc.ConnectionFactory;
+import br.com.githubGustavoSantos.agenda.modelo.Contato;
 
 public class ContatoDao {
 	
@@ -39,7 +39,7 @@ public class ContatoDao {
 	} 
 	}
 	
-	/** método para listar contatos*/
+	/** mÃ©todo para listar contatos*/
 	public List<Contato> getContatos() {
 		
 		String sql = "select * from contatos2";
@@ -70,7 +70,7 @@ public class ContatoDao {
 		return contatoList;
 	}
 	
-	/** método para atualizar contato*/
+	/** mÃ©todo para atualizar contato*/
 	public void updateContato(Contato contato) {
 		String update = "update contatos2 set " +
 					 	"nome= ?, email= ?, endereco= ?" +
