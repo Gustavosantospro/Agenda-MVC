@@ -1,4 +1,4 @@
-package br.com.caelum.agenda.mvc.servlet;
+package br.com.githubGustavoSantos.agenda.mvc.servlet;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.caelum.agenda.mvc.logica.Logica;
+import br.com.githubGustavoSantos.agenda.mvc.logica.Logica;
 
 @WebServlet("/mvc")
 public class ControllerServlet extends HttpServlet{
@@ -20,16 +20,16 @@ public class ControllerServlet extends HttpServlet{
 		String nomeDaClasse = "br.com.caelum.agenda.mvc.logica." + parametro;
 		
 		try {
-			// cria uma representação de uma classe
+			// cria uma representaÃ§Ã£o de uma classe
 			Class classe = Class.forName(nomeDaClasse);
-			// instânciando um objeto do tipo lógica(para chamar o método execute)
+			// instÃ¢nciando um objeto do tipo lÃ³gica(para chamar o mÃ©todo execute)
 			Logica logica = (Logica) classe.newInstance();
-			// como response teremos uma string contendo o nome de uma página jsp
+			// como response teremos uma string contendo o nome de uma pÃ¡gina jsp
 			String pagina = logica.executa(request, response);
 			request.getRequestDispatcher(pagina).forward(request, response);
 			
 		} catch (Exception e) {
-			throw new ServletException( "a lógica de negócios causou uma exceção", e);
+			throw new ServletException( "a lÃ³gica de negÃ³cios causou uma exceÃ§Ã£o", e);
 		}
 	}
 }
