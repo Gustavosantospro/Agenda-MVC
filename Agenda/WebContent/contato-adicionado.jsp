@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title> Contato Adicionado</title>
 </head>
 <body>
 	o contato ${param.nome } foi adicionado.
