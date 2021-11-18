@@ -1,4 +1,4 @@
-package br.com.githubGustavoSantos.agenda.dao;
+package br.com.caelum.agenda.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,15 +7,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.Date;
-import br.com.githubGustavoSantos.agenda.jdbc.ConnectionFactory;
-import br.com.githubGustavoSantos.agenda.modelo.Contato;
+import br.com.caelum.agenda.jdbc.ConnectionFactory;
+import br.com.caelum.agenda.modelo.Contato;
 
 public class ContatoDao {
 	
 	private Connection con;
-	
-	public ContatoDao()  {
-		this.con = new ConnectionFactory().getConnection();
+	// injeção de dependência
+	public ContatoDao(Connection con)  {
+		this.con = con;
 	}
 	
 	/**metodo para adicionar contato ao banco de dados*/
@@ -39,7 +39,7 @@ public class ContatoDao {
 	} 
 	}
 	
-	/** mÃ©todo para listar contatos*/
+	/** método para listar contatos*/
 	public List<Contato> getContatos() {
 		
 		String sql = "select * from contatos2";
@@ -70,7 +70,7 @@ public class ContatoDao {
 		return contatoList;
 	}
 	
-	/** mÃ©todo para atualizar contato*/
+	/** método para atualizar contato*/
 	public void updateContato(Contato contato) {
 		String update = "update contatos2 set " +
 					 	"nome= ?, email= ?, endereco= ?" +
